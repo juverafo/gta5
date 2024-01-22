@@ -1,0 +1,67 @@
+                                                       TP PHP
+
+
+
+Version 1 (cette version est destinée à ceux qui ne souhaitent pas ratrapper les critères de compétence du maquettage et/ou du html/css non validés sur le précédent brief):
+
+Star'Island le serveur RP GTA5 souhaite à présent permettre l'achat de skins,maps, armes, vehicules et bonus sur leur site web, l'achat générant ainsi un code unique à entrer dans le jeu pour débloquer ces achats.
+Ainsi la page d'accueil serait le catalogue des produits en vente avec la possibilité de les ajouter au panier puis d'accéder à ce panier pour finaliser la commande. 
+
+Donc en résumé:
+
+coté utilisateur:
+- page accueil
+- page panier
+
+coté back-office (auquel on pourra accéder via un dropdown de gestion):
+- une page de gestion des catégories (ajout, modification, tableau récapitulatif des catégories et suppression)
+- une page d'ajout de produit avec les champs prix, titre , description, categorie et photo (qu'il faudra renommer et uploader). Les contrôles sur la saisie des champs de formulaire seront à mettre en place et des messages en session et redirection vers une page de gestion de produit devront être gérés.
+- une page gestion produit contenant un tableau récapitulatif des produit avec possibilité de modifier ou supprimer des produit.
+- une page de modification des produits avec préremplissage des champs de formulaire, contrôle et mise en place de la modification de la photo (suppression de la précédente photo et ajout de la nouvelle).
+
+
+optionnel car non fait ensemble:
+- inscription 
+- connexion
+
+
+coté BDD:
+tables:
+
+   *produit:
+-id (Auto-Increment)
+-titre (varchar 255)
+-id_categorie (int)
+-description (text)
+photo (varchar 255)
+
+   *categorie:
+-id (Auto-Increment)
+-titre (varchar 255)
+
+   *commande:
+-id (Auto-Increment)
+-date (date)
+***optionnel si il y a authentification d'utilisateur: -id_utilisateur (int)
+
+   *achats:
+-id (Auto-Increment)
+-id_produit (int)
+-id_commande (int)
+
+  ****utilisateur (optionnel)
+-id (Auto-Increment)
+-mdp (varchar 255)
+-mail (varchar 255)
+
+
+
+version 2: (reprend la version 1 + ce qui suit)
+
+A partir du pack graphique et des screens (cf dossier mockup) reproduire la maquette figma des screens et en faire une reproduction fidèle à l'aide d'html/css et bootstrap si voulu.
+La page galerie servira au catalogue des produits et permettra en plus de les ajoutés au panier
+(en bref vous avez seulement une page supplémentaire par rapport à la version 1 et c'est la page d'accueil)
+
+
+Tout ça à versionner sur github et à livrer.
+Au plaisir de voir votre code :)
